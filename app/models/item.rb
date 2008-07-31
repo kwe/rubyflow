@@ -10,7 +10,7 @@ class Item < ActiveRecord::Base
   validates_uniqueness_of   :name, :if => :name?
   validates_format_of       :name, :with => /^[\w\-\_]+$/, :if => :name?, :message => 'is invalid (alphanumerics, hyphens and underscores only)'
   validates_length_of       :name, :within => 4..255, :if => :name?
-  validates_length_of       :content, :within => 25..1200
+  validates_length_of       :content, :within => 5..1200
   validates_format_of       :tags, :with => /^[\s\w\-\_\:]+$/, :if => :tags?, :message => 'are invalid (alphanumerics, hyphens and underscores only)'
   
   def to_param

@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(:version => 10) do
     t.text     "content"
     t.text     "metadata"
     t.string   "name"
-    t.text     "tags",           :limit => 255
+    t.text     "tags"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "byline"
-    t.integer  "comments_count",                :default => 0
+    t.integer  "comments_count", :default => 0
   end
 
   create_table "open_id_authentication_associations", :force => true do |t|
